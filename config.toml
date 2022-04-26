@@ -1,0 +1,6 @@
+[somemod.name]
+g = "$x"
+a_long_string = [1,2]
+
+[somemod.name2]
+x = 1

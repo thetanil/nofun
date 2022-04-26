@@ -59,5 +59,11 @@
  ::::::::::::::::::::::::::::
  REM Run shell as admin (example) - put here code as you like
  ECHO %batchName% Arguments: P1=%1 P2=%2 P3=%3 P4=%4 P5=%5 P6=%6 P7=%7 P8=%8 P9=%9
- choco upgrade -y ninja cmake mingw vscode vscode-cpptools ptime
- choco uninstall -y llvm cmder
+@REM  pacman -Syu and pacman -Sy vim cmake ninja llvm gdb in self installed msys2
+@REM  choco uninstall -y cmder mingw ninja cmake llvm gdb msys2
+@REM pacman -Sy --needed base-devel mingw-w64-clang-x86_64-toolchain vim cmake ninja
+@rem install vscode via installer
+@rem install cmake via installer
+@rem choco upgrade -y cmake ninja llvm vscode vscode-markdown-all-in-one ptime
+@rem pacman -Sy --needed base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-ninja mingw-w64-cmake vim
+pause

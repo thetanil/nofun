@@ -1,8 +1,13 @@
-cmake_minimum_required(VERSION 2.9)
-set( CMAKE_BUILD_TYPE "Debug")
-set( CMAKE_CXX_COMPILER "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/g++.exe" )
-set( CMAKE_C_COMPILER "C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/gcc.exe" )
+cmake_minimum_required(VERSION 3.0.0)
+set(CMAKE_BUILD_TYPE Debug)
 
-project(hello_world)
+project(nofun VERSION 0.1.0)
 
-add_executable(app main.cpp)
+include(CTest)
+enable_testing()
+
+add_executable(nofun src/main.cpp)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
